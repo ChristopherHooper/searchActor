@@ -1,17 +1,28 @@
 package com.belmont.xp.searchactor;
-public class searchActorDynamically extends Activity {
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+
+import java.util.ArrayList;
+
+public class searchActor extends Activity {
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        setContentView(R.layout.countries);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, Actors);
+                android.R.layout.simple_dropdown_item_1line, list);
         AutoCompleteTextView textView = (AutoCompleteTextView)
-                findViewById(R.id.countries_list);
+                findViewById(R.id.list_item);
         textView.setAdapter(adapter);
     }
 
-    private static final String[] Actors = new String[] {
-            "Belgium", "France", "Italy", "Germany", "Spain"
-    };
+    public static final ArrayList<String> list = new ArrayList<String>() {{
+        add("A");
+        add("B");
+        add("C");
+        add("D");
+        add("E");
+    }};
 }

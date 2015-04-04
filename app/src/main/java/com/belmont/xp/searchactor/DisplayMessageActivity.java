@@ -16,7 +16,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
         // Get the message from the intent
         Intent intent = getIntent();
         String message = intent.getStringExtra(activity_my.EXTRA_MESSAGE);
-        MySQLiteHelper.PrettyPrintActorMovies(message);
+        //MySQLiteHelper.PrettyPrintActorMovies(message);
 
         // Create the text view
         TextView textView = new TextView(this);
@@ -42,17 +42,16 @@ public class DisplayMessageActivity extends ActionBarActivity {
     /**
      * A placeholder fragment containing a simple view.
 
-    public static class PlaceholderFragment extends Fragment {
+     public static class PlaceholderFragment extends Fragment {
 
-        public PlaceholderFragment() { }
+     public PlaceholderFragment() { }
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_display_message,
-                    container, false);
-            return rootView;
-        }
-    }
-    */
+     @Override public View onCreateView(LayoutInflater inflater, ViewGroup container,
+     Bundle savedInstanceState) {
+     View rootView = inflater.inflate(R.layout.fragment_display_message,
+     container, false);
+     return rootView;
+     }
+     }
+     */
 }

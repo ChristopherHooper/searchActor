@@ -17,6 +17,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            java {
+                exclude '**/DBAdapter.java'
+            }
+        }
+        androidTest {
+            java {
+                exclude '**/DBAdapter.java'
+            }
+        }
+    }
 }
 
 dependencies {
